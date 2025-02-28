@@ -1,5 +1,4 @@
-# act3-decrease-n-conquer
-
+# task-scheduling
 Task Scheduling with Random Dependency Graphs (Variable Size Decrease)
 Scenario:
 
