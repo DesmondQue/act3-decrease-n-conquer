@@ -1,1 +1,0 @@
-# act3-decrease-n-conquer
