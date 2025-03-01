@@ -29,7 +29,7 @@ int weighOdd(int coins[], int left, int right, int itr){
     int leftEnd = left + partition - 1 + (remainder != 0 ? 1 : 0); // Sets 1/3 of the coins as left side
     int rightEnd = leftEnd + partition + (remainder == 0 ? 0 : 1); // Sets middle group as right side, unused group is set aside
 
-    int grpSize = (numCoins / 3) + 1;
+    int grpSize = (numCoins / 3) + (remainder == 0 ? 0 : 1);
     int unusedSize = right - rightEnd;
 
     int leftWeight = 0, rightWeight = 0;
