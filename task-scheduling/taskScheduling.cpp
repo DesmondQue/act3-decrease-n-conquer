@@ -5,7 +5,7 @@
 #include <string>
 #include <ctime>
 #include <limits>
-#include <cstdlib> // For system()
+#include <cstdlib>
 
 using namespace std;
 
@@ -63,9 +63,22 @@ void displayMenu() {
     cout << "[2] Display Adjacency List Representation" << endl;
     cout << "[3] Display Topological Sort Process" << endl;
     cout << "[4] Display Stack to Result Transformation" << endl;
-    cout << "[5] Summary (include final topological order)" << endl;
+    cout << "[5] Summary (final topological order)" << endl;
     cout << "[0] Exit" << endl;
     cout << "==============================================" << endl;
+}
+
+void exitMenu() {
+    cout << "==============================================" << endl;
+    cout << "              MADE BY GROUP 6   " << endl;
+    cout << "==============================================" << endl;
+    cout << "              BAGAYAN, JASPER" << endl;
+    cout << "              FRANCISCO, KYLE" << endl;
+    cout << "               QUE, DESMOND" << endl;
+    cout << "               SALVA, ADRIAN" << endl;
+    cout << "==============================================" << endl;
+    cout << endl;
+    cout << endl;
 }
 
 void handleMenuOption(int option, vector<vector<int>>& adjacencyList, int& n) {
@@ -170,7 +183,9 @@ void handleMenuOption(int option, vector<vector<int>>& adjacencyList, int& n) {
         pause();
         break;
     case 0:
-        cout << "Exiting the program." << endl;
+        clearScreen();
+        exitMenu();
+        cout << "Exiting the program..." << endl << endl;
         break;
     default:
         cout << "Invalid option." << endl;
