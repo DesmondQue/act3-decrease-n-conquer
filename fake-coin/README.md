@@ -31,11 +31,12 @@ Guide Questions:
 
 3. How does the divide-and-weigh strategy reduce the problem size by a constant factor at each step?
   - It is constantly reduced by half for each iteration such that,
-    the total weights of both halves are weighed where the lighter would be taken for the next iteration until the counterfeit is found.
+    the total weights of both halves (if odd amount, set aside the remaining coins in a separate group) are weighed where the lighter weight would be taken
+    for the next iteration until the counterfeit is found. If both are weighed to be equal, then we assume the counterfeit was put in the separate group.
 
 4. Can you think of a scenario where this algorithm might fail? If so, how would you address it?
   - The counterfeit weight is generated based on probability, if the program detects that all coins are genuine, it will repeat the program
     until it generates a fake one. This could take several resets if the probability leans toward not generating a counterfeit.
-    To address this, we simply raise the chances of generating the fake weight. Or we could jump to a prompt that will give us
-    the option to redo the problem.
+    To address this, we could simply raise the chances of generating the fake weight or guarantee that it generates a fake coin.
+    We could also jump to a prompt that will give us the option to redo the problem.
 ```
